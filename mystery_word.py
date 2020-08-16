@@ -1,79 +1,57 @@
-import random
 
-word = random.words.txt
+mysteryWord = ""
+guessedLetters = ""
+guessesRemaining = 8
+gameMode = ""
+approvedLetters = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
 
-wordLetters []
-wordLength len(word)
 
-for i in range(0,wordlength):
-    currentLetter = word[i:i+1]
-    wordLetters.append(currentLetter)
 
-    unpackedWord=""
-    for i in range(0,wordlength):
-        unpackedWord = unpackedWoed + wordletters[i]
+pickRandomWord("difficulty"):
+    if difficulty == "e"
+        #choose from dictionary word between 4 and 6 letters
+        #set chosenword value to mysteryWord
+    elif difficulty == "m"
+        #choose from dictionary word between 6 and 8 letters
+        #set chosenword value to mysteryWord
+    elif difficulty == "h"
+        #choose from dictionary word that's more than 8 letters
+        #set chosenword value to mysteryWord
 
-def main()
-    print("Mystery Word Game")
-    print(" ")
-
-    global previousGuesses
-    previousGuesses =[]
-
-    load_wordLetters_Array()
-
-    instructions = "Please Guess a Letter in the Mystery Word: "
-    global currentGuess
-    currentGuess = input(instructions)
-    currentGuess = currentGuess.upper()
-    if len(currentGuess) != 1:
-        print(" ")
-        print("Error - Type in only ONE Letter for Guess")
-        print(" ")
-
+guessLetter("inputLetter"):
+    if letter not in approvedLetters:
+        pass
     else:
-        previousGuesses.append(currentGuess)
-        checkPlayerGuess()  
-        check_if_WordGuessed  
+        letter = inputLetter.lower()
+        if letter in mysteryWord:
+            pass
+        elif letter not in mysteryWord:
+            print("Sorry! That letter is not in mysteryWord.")
+            guessesRemaining -= 1
+            pass
 
-def createPreviousGuessesList()
-    previousGuessesLength = len(previousGuesses)
-    previousGuessesList = "Your Guesses so far have been: "
 
-    for i in range(9.previousGuessesLength):
-        previousGuessesList = previousGuessesList + previousGuesses[i] + ", "
-    print (previousGuessesList)
-    print(" ")
-                
 
-def checkPlayerGuess():
-    global matchedLetterCountmatchedLettersCount = 0
-    for i in ranfe (0,wordlength):
-        if currentGuess == wordLetters{i}
-            guessedLetters[i} = currentGuess]
-            matchedLettersCount = matchedLettersCount + 1
+gameStart():
+    print("Welcome to Mystery Word!\n")
+    print("You can choose between 3 modes of difficulty -- 'e' for easy, 'm' for medium, or 'h' for hard.\n")
+    gameMode = input("Enter difficulty level: ")
+    if gameMode != "e" or "m" or "h"
+        raise CustomError ("Error in loading game mode. Please input either 'e', 'm', or 'h'.")
+        gameMode()
+    elif gameMode == "e"
+        pickRandomWord("e")
+    elif gameMode == "m"
+        pickRandomWord("m")
+    elif gameMode == "h"
+        pickRandomWord("h")
 
-    if matchedLetterCount > 0:
-        print("Your Guess of " + currentGuess + " Matches " + str(matchedLettersCount) + "Letter(s).")
-        print(" ")
-    else:
-        print("Sorry the Letter " + currentGuess + " is not in the word.")
-        print(" ")
 
-def playMysteryWord()
-    global gameOver
-    gameOver = False
-    global nbrOfGuesses
-    nbrOfGuesses = 0
-    global wordHasBeenGuessed
-    wordHasBeenGuessed = False
+if __name__ == __main:
+    
 
-    while gameOver ==False:
-        if wordHasBeenGuessed == True:
-            gameOver=True
-            break
-        nbrOfGuesses = nbrOfGuesses + 1
-        if nbrOfGuesses > 8
-            gameOver=True
+
+
+
 
 

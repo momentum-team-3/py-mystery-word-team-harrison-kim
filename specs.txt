@@ -1,0 +1,33 @@
+
+1) Introduction
+1a - greet the user with a print statement
+1b - get input for the difficulty level between easy (4-6 char), medium (6-8 char), and hard (8+ char)
+1c - generate a random word from words.txt
+1d - print the number of letters in the word that was picked from 1c
+
+2) Game
+2a - getting letter guesses 1 by 1 from user, case insensitive
+   - if not an alphabetical letter, then tell them invalid and reprompt input (while loop?)
+   - if is a letter in the mystery word, then update the display (use an array?) to show the guessed letter in proper position 
+
+3) Conditions
+3a - the user is only allowed 8 guesses; reminder print to tell them how many guesses each round
+   - only lose a guess if guess IS alphabetical AND NOT in mystery word array (nested conditionals for this)
+   - if guessed word is already guessed do not take a guess away from them, thus need a guessed letters array and 
+     check if in this array first BEFORE removing a guess from the 8 for the game 
+   - checker each round if guess counter is less than 1; then terminate the game and print "game over" 
+   - check if word is completely filled in the mystery word array, and if so, then print "you win! plus 10 gold stars"
+   -when game ends, ask if want to play again and if so need to be able to reload the game to start over 
+      -set the guess counter to 8, pick a new word, reset the mystery word array to all blanks 
+
+
+4) data structuring for the game 
+
+- array/string to store the mystery word
+- array/string to store guessed letters
+- integer counter to store the number of guesses left
+-
+
+
+if pass the difficulty variable to a function that picks the word and sets it 
+
